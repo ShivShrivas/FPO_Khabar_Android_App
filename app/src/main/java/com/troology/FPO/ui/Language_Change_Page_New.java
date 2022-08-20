@@ -3,6 +3,8 @@ package com.troology.FPO.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,13 +19,25 @@ import android.widget.TextView;
 
 import com.troology.FPO.ApplicationController;
 import com.troology.FPO.R;
+import com.troology.FPO.RetofitImplementation.ApiService;
+import com.troology.FPO.RetofitImplementation.RestClient;
+import com.troology.FPO.adapters.AllLanguageAdapter;
+import com.troology.FPO.model.GetAllLanguageModel;
+
+import java.util.ArrayList;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Language_Change_Page_New extends AppCompatActivity {
 ConstraintLayout englishCard,hindiCard;
     ApplicationController applicationController;
     String lang;
+    AllLanguageAdapter adapter;
     Button buttonForLanguageChange;
+    RecyclerView recyclerViewLanguagePage;
     ImageView SymbImgEng, SymbImgHindi;
     SharedPreferences sharedpreferences;
     TextView langSymbHindi,langSymbEng;
@@ -33,6 +47,26 @@ ConstraintLayout englishCard,hindiCard;
         setContentView(R.layout.activity_language_change_page_new);
         applicationController= (ApplicationController) getApplication();
         sharedpreferences = getSharedPreferences("APPDATA", Context.MODE_PRIVATE);
+        recyclerViewLanguagePage=findViewById(R.id.recyclerViewLanguagePage);
+        recyclerViewLanguagePage.setLayoutManager(new GridLayoutManager(this,2));
+        RestClient restClient=new RestClient();
+        ApiService apiService=restClient.getApiService();
+        Call<ArrayList<GetAllLanguageModel>> call=apiService.getAllLanguage();
+        call.enqueue(new Callback<ArrayList<GetAllLanguageModel>>() {
+            @Override
+            public void onResponse(Call<ArrayList<GetAllLanguageModel>> call, Response<ArrayList<GetAllLanguageModel>> response) {
+                ArrayList<GetAllLanguageModel> arrayList=response.body();
+                adapter=new AllLanguageAdapter(Language_Change_Page_New.this,arrayList);
+                recyclerViewLanguagePage.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<GetAllLanguageModel>> call, Throwable t) {
+
+            }
+        });
+
         englishCard=findViewById(R.id.englishCard);
         hindiCard=findViewById(R.id.hindiCard);
         langSymbHindi=findViewById(R.id.langSymbHindi);

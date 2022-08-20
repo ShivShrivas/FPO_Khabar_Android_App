@@ -1,6 +1,7 @@
 package com.troology.FPO.RetofitImplementation;
 
 import com.troology.FPO.model.GetAllInsightsModel;
+import com.troology.FPO.model.GetAllLanguageModel;
 import com.troology.FPO.model.GetAllLiveNewsModel;
 import com.troology.FPO.model.GetAllMyFeedModel;
 import com.troology.FPO.model.GetHeaderTagOfNewsByTagModel;
@@ -80,6 +81,9 @@ public  interface ApiService {
 
     @GET("News/livenews/{id}")
     Call<ArrayList<MixNewsInsightModel>> searchNewsbyId(@Path("id") String itemId);
+
+    @GET("Language/getLanguageforuser")
+    Call<ArrayList<GetAllLanguageModel>> getAllLanguage();
 
 
 }
