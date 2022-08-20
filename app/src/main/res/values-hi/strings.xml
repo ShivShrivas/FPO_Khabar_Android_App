@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">एफपीओ खबर</string>
+    <string name="read_more"><b><u>समाचार पढ़ो</u></b></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragtext">मधुमक्खी पालन और शहद प्रसंस्करण सामाजिक-आर्थिक गतिविधियों में से एक है, जो सामान्य रूप से जंगलों और पर्यावरण के अनुकूल है। कई पारिस्थितिक तंत्रों में, मधुमक्खियां महत्वपूर्ण परागणक हैं जो उन पारिस्थितिक तंत्रों के रखरखाव को सुनिश्चित करती हैं। लंबे समय से, कृषि ने मधुमक्खियों द्वारा परागण के मूल्य को मान्यता दी है। यहां तक ​​​​कि पिछवाड़े के मधुमक्खी पालकों ने भी अपने बगीचों की उपज में नाटकीय सुधार देखा: अधिक से अधिक फल, फूल और सब्जियां।
+
+भारत में, लगभग सोलह लाख लोग प्रत्यक्ष या अप्रत्यक्ष रूप से मधुमक्खी पालन और संबद्ध गतिविधियों में लगे हुए हैं। देश के प्रमुख शहद उत्पादक राज्यों में पंजाब, हरियाणा, हिमाचल प्रदेश, उत्तर प्रदेश, बिहार और पश्चिम बंगाल शामिल हैं। मधुमक्खी पालन देश में मुख्य रूप से वन आधारित रहा है। इस प्रकार शहद के उत्पादन के लिए कच्चा माल प्रकृति से प्राप्त किया जा रहा है।
+    </string>
+    <string name="this_friday_meet_andy_and_lindsey_stevens_of_happy_hens_n_tap_to_know_more">इस शुक्रवार को हैप्पी हेंसो के एंडी और लिंडसे स्टीवंस से मिलें </string>
+    <string name="_16_news">16 समाचार</string>
+    <string name="daily_roundup">DAILY ROUNDUP</string>
+    <string name="top_news_from_today_you_shouldn_t_miss">आज की प्रमुख खबरें आपको नहीं छोड़नी चाहिए</string>
+    <string name="read_news">समाचार पढ़ो</string>
+    <string name="swipe_up_for_skip">स्किप करने के लिए ऊपर की ओर स्वाइप करें</string>
+    <string name="insights">इनसाइट्स</string>
+    <string name="let_s_find_the_nimportant_things_here">आइए जानते हैं \महत्वपूर्ण बातें यहां</string>
+    <string name="knowledge_series">ज्ञान श्रृंखला</string>
+    <string name="trainer_programme">प्रशिक्षक कार्यक्रम</string>
+    <string name="category">श्रेणी</string>
+    <string name="search">खोज...</string>
+    <string name="all_news">सभी समाचार</string>
+    <string name="discover">खोज करना</string>
+    <string name="large_ncardamom">बडी \nइलायची</string>
+    <string name="beekeeping_n_dnppcl">मधुमक्खी पालन \n(डीएनपीपीसीएल)</string>
+    <string name="banana_nculture">केला \संस्कृति</string>
+    <string name="fpo_khabar">एफपीओ खबर</string>
+    <string name="my_feed">मेरी फ़ीड्स</string>
+    <string name="bookmark">पृष्ठ स्मृति</string>
+    <string name="trending">रुझान</string>
+    <string name="topics">विषय</string>
+    <string name="agar_based_agroforestry">आगर आधारित \n कृषि वानिकी</string>
+    <string name="drip_in_ncotton">कपास में\nड्रिप करें</string>
+    <string name="cashew_nprocessing">काजू \nप्रसंस्करण</string>
+    <string name="eucalyptus_nwith_paddy">यूकेलिप्टस \nधान के साथ</string>
+    <string name="integrated_nfish_farming">एकीकृत \nमछली पालन</string>
+    <string name="sugarcane_ninitiative">गन्ना \n उपक्रम</string>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="top_stories">शीर्ष आलेख</string>
+    <string name="unread">अपठित</string>
+    <string name="tap_to_know_more">अधिक जानने के लिए टैप करें…</string>
+    <string name="like">पसंद करें</string>
+    <string name="share_khabar">खबर साझा करें</string>
+    <string name="sign_in">साइन इन करें</string>
+    <string name="save_your_preferences">अपनी वरीयताएँ सहेजें</string>
+    <string name="sign_in_to_save_your_likes_nand_bookmarks">अपनी पसंद और बुकमार्क \n सहेजने के लिए साइन इन करें</string>
+    <string name="language">भाषा परिवर्तन</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="personalize_your_feed">अपने फ़ीड को निजीकृत करें</string>
+    <string name="hd_images">एचडी इमेजिस</string>
+    <string name="auto_play">स्वत: प्ले</string>
+    <string name="text_size">टेक्स्ट का साइज़</string>
+    <string name="share_this_app">इस ऐप्लिकेशन को शेयर कीजिए</string>
+    <string name="rate_this_app">इस ऐप्लिकेशन को रेट करें</string>
+    <string name="feedback">प्रतिपुष्टि</string>
+    <string name="term_amp_conditions">हमारी शर्ते</string>
+    <string name="privacy">गोपनीयता</string>
+    <string name="night_mode">रात्रि मोड</string>
+    <string name="twitter_consumer_key">SEoE6ipIwBpguGMKNAM0IKlWz</string>
+    <string name="twitter_consumer_secret">6iTu5hPxstKuYeZZNJ0KXjZ7EgzYber4vlq1UQYM95cRlDtdTo</string>
+    <string name="title_activity_twitter_sign_up_page">TwitterSignUpPage</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="choose_language">भाषा चुनें</string>
+</resources>
