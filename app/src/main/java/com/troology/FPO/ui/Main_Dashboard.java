@@ -99,6 +99,7 @@ public class Main_Dashboard extends AppCompatActivity {
 
                 startActivity(i);
             }
+
         });
         unreadcard.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -70,14 +70,12 @@ ApplicationController applicationController;
                             adapter.notifyDataSetChanged();
                         }
 
-                }{
-                    Toast.makeText(NewsPageForCategoryByTag.this, "Api in not working please contact to developer", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<GetHeaderTagOfNewsByTagModel> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: "+t.getMessage());
             }
         });
 

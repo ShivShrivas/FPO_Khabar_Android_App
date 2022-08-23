@@ -1,5 +1,6 @@
 package com.troology.FPO.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -35,19 +36,25 @@ public class SearchNewsAdapter extends RecyclerView.Adapter<SearchNewsAdapter.Se
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SearchViewHolder holder, int position) {
-        holder.searchNewsHeadingText.setText(arrayList.get(position).getNewss().get(0).getHeading());
-        String newImgUrl=("http://fpokhabar.evalue8.info/"+ arrayList.get(position).getImage().toString().trim());
-        String newUrl2=newImgUrl.replaceAll("\"","");
-        Glide.with(holder.searchNewsImageView).load(newUrl2).into(holder.searchNewsImageView);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(context, SearchedNewsItemPage.class);
-                i.putExtra("id",arrayList.get(position).getId());
-                context.startActivity(i);
-            }
-        });
+    public void onBindViewHolder(@NonNull SearchViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        try{
+            holder.searchNewsHeadingText.setText(arrayList.get(position).getNewss().get(0).getHeading());
+            String newImgUrl=("http://fpokhabar.evalue8.info/"+ arrayList.get(position).getImage().get(0).toString().trim());
+            String newUrl2=newImgUrl.replaceAll("\"","");
+            Glide.with(holder.searchNewsImageView).load(newUrl2).into(holder.searchNewsImageView);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i=new Intent(context, SearchedNewsItemPage.class);
+                    i.putExtra("id",arrayList.get(position).getId());
+                    context.startActivity(i);
+                }
+            });
+        }catch (Exception e){
+
+
+        }
+
     }
 
     @Override

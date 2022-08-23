@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/newsImageSearch"
         android:layout_width="60dp"
+        android:background="@drawable/dummy"
         android:layout_height="60dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +23,7 @@
         android:layout_marginEnd="8dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:text="hihhi my name is shivam shbivhvchdhddd"
+        android:text="If there is some problem from Backend then it will show"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/timeStampTxt"

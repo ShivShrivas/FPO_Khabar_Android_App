@@ -82,7 +82,17 @@ SearchNewsAdapter adapter;
                 if (response.body()!=null) {
 
                     ArrayList<GetAllLiveNewsModel> arrayList = response.body();
-                    adapter = new SearchNewsAdapter(SearchNews.this, arrayList);
+                    ArrayList<GetAllLiveNewsModel> arrayList2 = new ArrayList<>();
+                    for (int i=0;i<arrayList.size();i++){
+                     try {
+                         if (arrayList.get(i).getType().equals("Insight")){
+
+                         }
+                     }catch (Exception e){
+                         arrayList2.add(arrayList.get(i));
+                     }
+                    }
+                    adapter = new SearchNewsAdapter(SearchNews.this, arrayList2);
                     recyclerViewSearhView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }else Toast.makeText(SearchNews.this, "No news found", Toast.LENGTH_SHORT).show();
@@ -90,7 +100,7 @@ SearchNewsAdapter adapter;
 
             @Override
             public void onFailure(Call<ArrayList<GetAllLiveNewsModel>> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: "+t.getMessage());
             }
         });
     }
