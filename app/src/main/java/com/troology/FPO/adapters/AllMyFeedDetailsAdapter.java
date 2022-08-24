@@ -264,21 +264,16 @@ public class AllMyFeedDetailsAdapter extends PagerAdapter
 
             }
         });
-try {
+
     textView25.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getHeading());
 
-}catch (Exception e){
-    textView25.setText("arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getHeading()");
 
-}
 
-            try {
-                textView5.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getHeading());
-            }catch (Exception e){
 
-            }
-        try {
-            String newImgUrl=("http://fpokhabar.evalue8.info/"+ arrayList.get(position).getNewsdata().get(0).getImage().toString().trim());
+                textView5.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getFooterText());
+
+
+            String newImgUrl=("http://fpokhabar.evalue8.info/"+ arrayList.get(position).getNewsdata().get(0).getImage().get(0).toString().trim());
             String newUrl2=newImgUrl.replaceAll("\"","");
             Glide.with(imageView2).load(newUrl2).into(imageView2);
             Glide.with(imageView15).load(newUrl2).into(imageView15);
@@ -298,9 +293,7 @@ try {
                 }
             });
 
-        }catch (Exception e){
 
-        }
 
 
 bookmark_ic.setOnClickListener(new View.OnClickListener() {

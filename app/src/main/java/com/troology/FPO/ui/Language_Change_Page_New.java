@@ -41,6 +41,7 @@ ConstraintLayout englishCard,hindiCard;
     ImageView SymbImgEng, SymbImgHindi;
     SharedPreferences sharedpreferences;
     TextView langSymbHindi,langSymbEng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

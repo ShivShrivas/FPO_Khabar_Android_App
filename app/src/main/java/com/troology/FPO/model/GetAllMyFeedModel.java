@@ -27,7 +27,7 @@ public class GetAllMyFeedModel {
     @SerializedName("id")
     @Expose
     private String sid;
-    @SerializedName("newsdata")
+    @SerializedName("Newss")
     @Expose
     private List<GetAllLiveNewsModel> newsdata = null;
 

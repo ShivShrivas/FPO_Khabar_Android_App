@@ -69,7 +69,6 @@ public class GetAllBookmarkPage extends AppCompatActivity {
             call.enqueue(new Callback<ArrayList<GetAllMyFeedModel>>() {
                 @Override
                 public void onResponse(Call<ArrayList<GetAllMyFeedModel>> call, Response<ArrayList<GetAllMyFeedModel>> response) {
-                    Log.d("TAG", "onResponse: "+response.body());
                     if (response.body()!=null){
                         ArrayList<GetAllMyFeedModel> arrayList=response.body();
                         adapter=new AllMyFeedDetailsAdapter(GetAllBookmarkPage.this,arrayList, applicationController.getTextSize());

@@ -52,7 +52,7 @@ public class PhoneNumberValidationActivity extends AppCompatActivity {
                                 Toast.makeText(PhoneNumberValidationActivity.this, ""+response.body().get("message"), Toast.LENGTH_SHORT).show();
                                 Intent i=new Intent(PhoneNumberValidationActivity.this,ValidateOTPPage.class);
                                 i.putExtra("OTP",response.body().get("Otp").toString());
-                                i.putExtra("phone",num);
+                                i.putExtra("phone",String.valueOf(num));
                                 startActivity(i);
                                 finish();
                             }

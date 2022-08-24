@@ -1,6 +1,7 @@
 package com.troology.FPO.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.arch.core.executor.TaskExecutor;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.troology.FPO.R;
@@ -25,6 +27,7 @@ Intent i;
 String OTP,phone;
 EditText editTextforOTP;
     SharedPreferences prefs;
+    TextView mobileNumber;
 
 Button veriFyOTPBtn;
     @Override
@@ -33,10 +36,12 @@ Button veriFyOTPBtn;
         setContentView(R.layout.activity_validate_otppage);
         editTextforOTP=findViewById(R.id.editTextforOTP);
         veriFyOTPBtn=findViewById(R.id.veriFyOTPBtn);
+        mobileNumber=findViewById(R.id.mobileNumber);
         i=getIntent();
         OTP=i.getStringExtra("OTP");
         phone=i.getStringExtra("phone");
         prefs = getSharedPreferences("UserData", MODE_PRIVATE);
+        mobileNumber.setText(phone);
 
         veriFyOTPBtn.setOnClickListener(new View.OnClickListener() {
             @Override

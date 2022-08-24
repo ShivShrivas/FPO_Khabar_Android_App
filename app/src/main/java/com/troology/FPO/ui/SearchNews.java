@@ -85,11 +85,11 @@ SearchNewsAdapter adapter;
                     ArrayList<GetAllLiveNewsModel> arrayList2 = new ArrayList<>();
                     for (int i=0;i<arrayList.size();i++){
                      try {
-                         if (arrayList.get(i).getType().equals("Insight")){
+                         if (arrayList.get(i).getType().equals("News")){
+                             arrayList2.add(arrayList.get(i));
 
                          }
                      }catch (Exception e){
-                         arrayList2.add(arrayList.get(i));
                      }
                     }
                     adapter = new SearchNewsAdapter(SearchNews.this, arrayList2);
