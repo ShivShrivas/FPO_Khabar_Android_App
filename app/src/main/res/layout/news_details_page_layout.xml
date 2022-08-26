@@ -108,7 +108,7 @@
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="20dp"
@@ -119,6 +119,7 @@
                 android:text="@string/fragtext"
                 android:textColor="?attr/colorOnSecondary"
                 android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout17"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"

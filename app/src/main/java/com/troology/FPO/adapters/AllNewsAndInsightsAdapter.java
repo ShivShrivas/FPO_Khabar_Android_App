@@ -357,7 +357,6 @@ public class AllNewsAndInsightsAdapter extends PagerAdapter
             ViewPager2 viewPagerAllItems=view.findViewById(R.id.viewPagerAllItems);
             TabLayout tabLayout = view.findViewById(R.id.tabDots);
             InsightsPageInNewsAdapter adapter=new InsightsPageInNewsAdapter(context,arrayList.get(position));
-
             viewPagerAllItems.setAdapter(adapter);
             adapter.notifyDataSetChanged();
             TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPagerAllItems, true, new TabLayoutMediator.TabConfigurationStrategy() {

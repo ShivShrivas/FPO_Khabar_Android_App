@@ -3,6 +3,8 @@ package com.troology.FPO.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class News {
     @SerializedName("Language_Name")
     @Expose
@@ -12,7 +14,7 @@ public class News {
     private String topicName;
     @SerializedName("Tag")
     @Expose
-    private String tag;
+    private List<String> tag = null;
 
     @SerializedName("footerText")
     @Expose
@@ -51,11 +53,11 @@ public class News {
         this.topicName = topicName;
     }
 
-    public String getTag() {
+    public List<String> getTag() {
         return tag;
     }
 
-    public void setTag(String tag) {
+    public void setTag(List<String> tag) {
         this.tag = tag;
     }
 

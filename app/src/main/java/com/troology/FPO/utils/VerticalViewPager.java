@@ -57,6 +57,7 @@ public class VerticalViewPager  extends ViewPager {
 
         public void transformPage(View view, float position) {
             int pageWidth = view.getWidth();
+            int pageHeight = view.getHeight();
 
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left.
@@ -75,14 +76,21 @@ public class VerticalViewPager  extends ViewPager {
 
             } else if (position <= 1) { // (0,1]
                 // Fade the page out.
+                float scaleFactor = MIN_SCALE
+                        + (1 - MIN_SCALE) * (1 - Math.abs(position));
+                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
+                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
                 view.setAlpha(1 - position);
 
                 // Counteract the default slide transition
                 view.setTranslationX(pageWidth * -position);
-
+                if (position < 0) {
+                    view.setTranslationY(vertMargin - horzMargin / 2);
+                } else {
+                    view.setTranslationY(-vertMargin + horzMargin / 2);
+                }
                 // Scale the page down (between MIN_SCALE and 1)
-                float scaleFactor = MIN_SCALE
-                        + (1 - MIN_SCALE) * (1 - Math.abs(position));
+
                 view.setScaleX(scaleFactor);
                 view.setScaleY(scaleFactor);
 

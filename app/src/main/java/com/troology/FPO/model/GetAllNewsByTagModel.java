@@ -48,7 +48,7 @@ public class GetAllNewsByTagModel {
     private Integer v;
     @SerializedName("Tag")
     @Expose
-    private String tag;
+    private List<String> tag = null;
 
     public List<Object> getState() {
         return state;
@@ -154,12 +154,11 @@ public class GetAllNewsByTagModel {
         this.v = v;
     }
 
-    public String getTag() {
+    public List<String> getTag() {
         return tag;
     }
 
-    public void setTag(String tag) {
+    public void setTag(List<String> tag) {
         this.tag = tag;
     }
-
 }

@@ -77,10 +77,16 @@ public class GetAllMyFeedPage extends AppCompatActivity {
 
                         if (response.body()!=null){
                             ArrayList<GetAllMyFeedModel> arrayList=response.body();
-                            adapter=new AllMyFeedDetailsAdapter(GetAllMyFeedPage.this,arrayList,applicationController.getTextSize());
-                            viewPager.setOffscreenPageLimit(5);
-                            viewPager.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
+                            if(arrayList.size()<1){
+                                Toast.makeText(GetAllMyFeedPage.this, "You have not any feed!!", Toast.LENGTH_SHORT).show();
+                                onBackPressed();
+                            }else {
+                                adapter=new AllMyFeedDetailsAdapter(GetAllMyFeedPage.this,arrayList,applicationController.getTextSize());
+                                viewPager.setOffscreenPageLimit(5);
+                                viewPager.setAdapter(adapter);
+                                adapter.notifyDataSetChanged();
+                            }
+
                         }else {
                             Toast.makeText(GetAllMyFeedPage.this, "Service is not working", Toast.LENGTH_SHORT).show();
 

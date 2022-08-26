@@ -265,11 +265,9 @@ public class AllMyFeedDetailsAdapter extends PagerAdapter
             }
         });
 
-    textView25.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getHeading());
 
 
-
-
+          textView25.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getHeading());
                 textView5.setText(arrayList.get(position).getNewsdata().get(0).getNewss().get(0).getFooterText());
 
 

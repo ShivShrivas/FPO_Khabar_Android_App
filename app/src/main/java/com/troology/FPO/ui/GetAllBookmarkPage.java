@@ -71,10 +71,16 @@ public class GetAllBookmarkPage extends AppCompatActivity {
                 public void onResponse(Call<ArrayList<GetAllMyFeedModel>> call, Response<ArrayList<GetAllMyFeedModel>> response) {
                     if (response.body()!=null){
                         ArrayList<GetAllMyFeedModel> arrayList=response.body();
-                        adapter=new AllMyFeedDetailsAdapter(GetAllBookmarkPage.this,arrayList, applicationController.getTextSize());
-                        viewPager.setOffscreenPageLimit(5);
-                        viewPager.setAdapter(adapter);
-                        adapter.notifyDataSetChanged();
+                        if (arrayList.size()<1){
+                            Toast.makeText(GetAllBookmarkPage.this, "You have not any bookmark!!", Toast.LENGTH_SHORT).show();
+                            onBackPressed();
+                        }else {
+                            adapter=new AllMyFeedDetailsAdapter(GetAllBookmarkPage.this,arrayList, applicationController.getTextSize());
+                            viewPager.setOffscreenPageLimit(5);
+                            viewPager.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        }
+                
                     }else {
                         Toast.makeText(GetAllBookmarkPage.this, "Bookmark API is not working!!", Toast.LENGTH_SHORT).show();
                     }
