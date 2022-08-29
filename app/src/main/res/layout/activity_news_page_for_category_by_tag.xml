@@ -5,10 +5,10 @@
     android:id="@+id/newsDetailsPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.troology.FPO.ui.News_Details_Page">
+    tools:context="com.troology.farmermedia.ui.News_Details_Page">
 
 
-    <com.troology.FPO.utils.VerticalViewPager
+    <com.troology.farmermedia.utils.VerticalViewPager
         android:id="@+id/viewPagerForCategory"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </com.troology.FPO.utils.VerticalViewPager>
+    </com.troology.farmermedia.utils.VerticalViewPager>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

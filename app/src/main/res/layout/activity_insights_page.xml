@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/insights_bg"
-    tools:context="com.troology.FPO.ui.Insights_Page">
+    tools:context="com.troology.farmermedia.ui.Insights_Page">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"

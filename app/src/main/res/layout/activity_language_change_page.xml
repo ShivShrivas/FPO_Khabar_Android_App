@@ -5,7 +5,7 @@
     android:id="@+id/languageChangePageLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.troology.FPO.ui.Language_Change_Page">
+    tools:context="com.troology.farmermedia.ui.Language_Change_Page">
 
     <ImageView
         android:id="@+id/imageView6"

@@ -6,7 +6,7 @@
     android:id="@+id/AfterSplashPageLayout"
     android:background="?attr/background"
     android:layout_height="match_parent"
-    tools:context="com.troology.FPO.ui.AfterSplashPage">
+    tools:context="com.troology.farmermedia.ui.AfterSplashPage">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAfterSplasPage"

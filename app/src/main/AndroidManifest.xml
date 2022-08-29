@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.troology.FPO">
+    package="com.troology.farmermedia">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.troology.FPO.ApplicationController"
+        android:name="com.troology.farmermedia.ApplicationController"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,11 +18,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name="com.troology.FPO.ui.TwitterLoginActivity"
+            android:name="com.troology.farmermedia.ui.TwitterLoginActivity"
             android:exported="false" />
 
         <service
-            android:name="com.troology.FPO.utils.MyFirebaseMessagingService"
+            android:name="com.troology.farmermedia.utils.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -31,64 +31,64 @@
         </service>
 
         <activity
-            android:name="com.troology.FPO.ui.SearchedNewsItemPage"
+            android:name="com.troology.farmermedia.ui.SearchedNewsItemPage"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.UnreadNewsActivity"
+            android:name="com.troology.farmermedia.ui.UnreadNewsActivity"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.GetAllMyFeedPage"
+            android:name="com.troology.farmermedia.ui.GetAllMyFeedPage"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Language_Change_Page_New"
+            android:name="com.troology.farmermedia.ui.Language_Change_Page_New"
             android:configChanges="locale|orientation"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.GetAllBookmarkPage"
+            android:name="com.troology.farmermedia.ui.GetAllBookmarkPage"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.ValidateOTPPage"
+            android:name="com.troology.farmermedia.ui.ValidateOTPPage"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.PhoneNumberValidationActivity"
+            android:name="com.troology.farmermedia.ui.PhoneNumberValidationActivity"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.ImagePriview"
+            android:name="com.troology.farmermedia.ui.ImagePriview"
             android:exported="false"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.troology.FPO.ui.NewsPageForCategoryByTag"
+            android:name="com.troology.farmermedia.ui.NewsPageForCategoryByTag"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Topic_Wise_News_Page"
+            android:name="com.troology.farmermedia.ui.Topic_Wise_News_Page"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.SearchNews"
+            android:name="com.troology.farmermedia.ui.SearchNews"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.loginActivity"
+            android:name="com.troology.farmermedia.ui.loginActivity"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Settings_Page"
+            android:name="com.troology.farmermedia.ui.Settings_Page"
             android:configChanges="uiMode"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Language_Change_Page"
+            android:name="com.troology.farmermedia.ui.Language_Change_Page"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Insights_Page"
+            android:name="com.troology.farmermedia.ui.Insights_Page"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.AfterSplashPage"
+            android:name="com.troology.farmermedia.ui.AfterSplashPage"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.News_Details_Page"
+            android:name="com.troology.farmermedia.ui.News_Details_Page"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Main_Dashboard"
+            android:name="com.troology.farmermedia.ui.Main_Dashboard"
             android:exported="false" />
         <activity
-            android:name="com.troology.FPO.ui.Splash_Screen"
+            android:name="com.troology.farmermedia.ui.Splash_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -97,7 +97,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.troology.FPO.ui.MainActivity"
+            android:name="com.troology.farmermedia.ui.MainActivity"
             android:exported="true" />
 
         <meta-data

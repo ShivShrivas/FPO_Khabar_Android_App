@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context="com.troology.FPO.ui.ImagePriview">
+    tools:context="com.troology.farmermedia.ui.ImagePriview">
 
     <ImageView
         android:id="@+id/imageView16"
