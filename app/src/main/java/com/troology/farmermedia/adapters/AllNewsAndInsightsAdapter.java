@@ -164,9 +164,14 @@ public class AllNewsAndInsightsAdapter extends PagerAdapter
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        View view=layoutInflater.inflate(R.layout.news_details_page_layout_new,container,false);
+
         try {
-        View view=layoutInflater.inflate(R.layout.news_details_page_layout,container,false);
         prefs = context.getSharedPreferences("UserData", MODE_PRIVATE);
+        ConstraintLayout constraintLayout18=view.findViewById(R.id.constraintLayout18);
+        ConstraintLayout constraintLayout19=view.findViewById(R.id.constraintLayout19);
+        constraintLayout19.setVisibility(View.GONE);
+        constraintLayout18.setVisibility(View.VISIBLE);
         ImageView likeImageView=view.findViewById(R.id.likeImageView);
         view.findViewById(R.id.linearLayout7).setVisibility(View.GONE);
         view.findViewById(R.id.toolbar).setVisibility(View.GONE);
@@ -352,7 +357,10 @@ public class AllNewsAndInsightsAdapter extends PagerAdapter
         container.addView(view);
         return view;
         }catch (Exception e){
-            View view=layoutInflater.inflate(R.layout.insight_all_item_page,container,false);
+            ConstraintLayout constraintLayout18=view.findViewById(R.id.constraintLayout18);
+            ConstraintLayout constraintLayout19=view.findViewById(R.id.constraintLayout19);
+            constraintLayout19.setVisibility(View.VISIBLE);
+            constraintLayout18.setVisibility(View.GONE);
             ViewPager2 viewPagerAllItems=view.findViewById(R.id.viewPagerAllItems);
             TabLayout tabLayout = view.findViewById(R.id.tabDots);
             InsightsPageInNewsAdapter adapter=new InsightsPageInNewsAdapter(context,arrayList.get(position));
@@ -364,9 +372,10 @@ public class AllNewsAndInsightsAdapter extends PagerAdapter
             });
             tabLayoutMediator.attach();
 
-            container.addView(view);
-        return view;
         }
+
+        container.addView(view);
+        return view;
     }
 
     @Override

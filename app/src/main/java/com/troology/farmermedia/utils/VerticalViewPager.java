@@ -65,8 +65,8 @@ public class VerticalViewPager  extends ViewPager {
 
             } else if (position <= 0) { // [-1,0]
                 // Use the default slide transition when moving to the left page
-//                view.setAlpha(1);
-//                view.setTranslationX(view.getWidth() * -position);
+                view.setAlpha(1);
+                view.setTranslationX(view.getWidth() * -position);
 
                 //set Y position to swipe in from top
                 float yPosition = position * view.getHeight();
@@ -99,6 +99,7 @@ public class VerticalViewPager  extends ViewPager {
             else { // (1,+Infinity]
                 // This page is way off-screen to the right.
                 view.setAlpha(0);
+
             }
         }
     }
