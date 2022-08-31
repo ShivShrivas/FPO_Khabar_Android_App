@@ -24,7 +24,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -38,6 +42,8 @@ import com.troology.farmermedia.RetofitImplementation.RestClient;
 import com.troology.farmermedia.model.MixNewsInsightModel;
 import com.troology.farmermedia.ui.ImagePriview;
 import com.troology.farmermedia.ui.Main_Dashboard;
+import com.troology.farmermedia.utils.DotsIndicatorDecoration;
+import com.troology.farmermedia.utils.OnSwipeGestureListener;
 
 import java.util.ArrayList;
 
@@ -361,16 +367,24 @@ public class AllNewsAndInsightsAdapter extends PagerAdapter
             ConstraintLayout constraintLayout19=view.findViewById(R.id.constraintLayout19);
             constraintLayout19.setVisibility(View.VISIBLE);
             constraintLayout18.setVisibility(View.GONE);
-            ViewPager2 viewPagerAllItems=view.findViewById(R.id.viewPagerAllItems);
+            RecyclerView viewPagerAllItems=view.findViewById(R.id.viewPagerAllItems);
             TabLayout tabLayout = view.findViewById(R.id.tabDots);
+            viewPagerAllItems.setNestedScrollingEnabled(true);
+
+            viewPagerAllItems.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
             InsightsPageInNewsAdapter adapter=new InsightsPageInNewsAdapter(context,arrayList.get(position));
+
+
+            final int color = ContextCompat.getColor(context, R.color.white);
+            viewPagerAllItems.addItemDecoration(new DotsIndicatorDecoration(20, 4 * 4, 40, color, color));
+            new PagerSnapHelper().attachToRecyclerView(viewPagerAllItems);
             viewPagerAllItems.setAdapter(adapter);
             adapter.notifyDataSetChanged();
-            TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPagerAllItems, true, new TabLayoutMediator.TabConfigurationStrategy() {
-                @Override
-                public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) { }
-            });
-            tabLayoutMediator.attach();
+//            TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPagerAllItems, true, new TabLayoutMediator.TabConfigurationStrategy() {
+//                @Override
+//                public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) { }
+//            });
+//            tabLayoutMediator.attach();
 
         }
 
